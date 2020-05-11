@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css?family=Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Bree+Serif&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.set {
+  display: grid;
+  width: 100%;
+  height: 70vh;
+  grid-template-columns: 40vw 40vw;
+  grid-template-rows: repeat(5, 1fr);
+  justify-content: center;
+  grid-gap: 20px;
+  align-items: center;
+  grid-template-areas:
+    "w s"
+    "a d"
+    "j k"
+    "l l"
+    "p p";
+}
+.drum-btn {
+  font-size: 5rem;
+  font-family: "Bree Serif", serif;
+  line-height: 2;
+  border-radius: 15px;
+  text-align: center;
+  background-color: #fff;
+  outline: none;
+  border: none;
+  box-shadow: 10px 10px 5px;
+  width: 100%;
+  height: 100%;
+  transition: 0.3s;
+}
+.pressed {
+  box-shadow: 0 2px 3px;
+  opacity: 0.5;
+}
+#title {
+  font-size: 2rem; /*9*/
+  font-family: "Righteous", cursive;
+  margin: 0 0 10px 0;
+}
+.w {
+  grid-area: w;
+  background-image: url("../images/tom1.png");
+  background-size: cover;
+}
+.a {
+  grid-area: a;
+  background-image: url("../images/tom2.png");
+  background-size: cover;
+}
+
+.s {
+  grid-area: s;
+  background-image: url("../images/tom3.png");
+  background-size: cover;
+}
+
+.d {
+  grid-area: d;
+  background-image: url("../images/tom4.png");
+  background-size: cover;
+}
+
+.j {
+  grid-area: j;
+  background-image: url("../images/snare.png");
+  background-size: cover;
+}
+
+.k {
+  grid-area: k;
+  background-image: url("../images/crash.png");
+  background-size: cover;
+}
+
+.l {
+  grid-area: l;
+  background-image: url("../images/kick.png");
+  background-size: cover;
+}
+
+.para {
+  grid-area: p;
+}
+@media (min-width: 768px) {
+  .set {
+    display: grid;
+    width: 100%;
+    height: 90vh;
+    grid-template-columns: 25vw 25vw 25vw;
+    grid-template-rows: repeat(5, 1fr);
+    justify-content: center;
+    grid-gap: 45px;
+    align-items: center;
+    grid-template-areas:
+      "w s s"
+      "a a d"
+      "j k k"
+      "j l l";
+  }
+
+  #title {
+    font-size: 5rem;
+    margin-bottom: 50px;
+  }
+}
+@media (min-width: 1124px) {
+  .set {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .drum-btn {
+    margin: 20px;
+    height: 180px;
+    width: 180px;
+  }
+  #title {
+    font-size: 9rem;
+  }
+}
